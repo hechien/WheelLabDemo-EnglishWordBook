@@ -36,13 +36,13 @@ class WordsController < ApplicationController
 
   # GET /words/1/edit
   def edit
-    @word = Word.find(params[:id])
+    @word = current_user.words.find(params[:id])
   end
 
   # POST /words
   # POST /words.json
   def create
-    @word = Word.new(params[:word])
+    @word = current_user.words.build(params[:word])
 
     respond_to do |format|
       if @word.save
@@ -58,7 +58,7 @@ class WordsController < ApplicationController
   # PUT /words/1
   # PUT /words/1.json
   def update
-    @word = Word.find(params[:id])
+    @word = current_user.words.find(params[:id])
 
     respond_to do |format|
       if @word.update_attributes(params[:word])
@@ -74,7 +74,7 @@ class WordsController < ApplicationController
   # DELETE /words/1
   # DELETE /words/1.json
   def destroy
-    @word = Word.find(params[:id])
+    @word = current_user.words.find(params[:id])
     @word.destroy
 
     respond_to do |format|
