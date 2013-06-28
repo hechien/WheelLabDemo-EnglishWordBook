@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @word.user %>
+</p>
+
+<p>
+  <b>Raw:</b>
+  <%= @word.raw %>
+</p>
+
+<p>
+  <b>Translate:</b>
+  <%= @word.translate %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
