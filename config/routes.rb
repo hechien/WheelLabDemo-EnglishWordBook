@@ -1,8 +1,9 @@
 WheelLabDemoEnglishwordbook::Application.routes.draw do
   resources :words
 
-
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  root to: 'words#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
