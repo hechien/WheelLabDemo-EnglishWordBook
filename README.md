@@ -20,14 +20,23 @@ Hi，各位參與過Wheel Lab第一次活動的朋友們大家好，我是赫謙
 2. 單字 => 評論：一對多
 3. 使用者 => 評論：一對多
 
+## 使用方式
+
+請記得先安裝ruby & rails哦
+
+1. clone這個project之後用終端機進去專案目錄，輸入 `rake db:create`
+2. 執行 `rake db:migrate`
+3. 執行 `rails s -p 3001`
+4. 用瀏覽器打開 <http://localhost:3001> 就可以看到畫面了
+
 ## 使用的套件
 
-- devise
-- omniauth
-- omniauth-facebook
-- auto-facebook
-- anjlab-bootstrap
-- bootstrap-form
+- devise - 跟使用者註冊登入等等有關
+- omniauth - 用來與其他社群網站作登入的銜接套件
+- omniauth-facebook - 與facebook銜接的外掛
+- auto-facebook - 一個很好用的facebook登入外掛
+- anjlab-bootstrap - 套用bootstrap神器
+- bootstrap-form - 讓表單可以更加貼近bootstrap規則的外掛
 
 ## 那天有提到但沒辦法在這個Project展現的有
 

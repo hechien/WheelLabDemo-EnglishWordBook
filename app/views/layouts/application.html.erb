@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WheelLabDemoEnglishwordbook</title>
+  <title>英文單字簿</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
 
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
