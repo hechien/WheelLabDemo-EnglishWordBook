@@ -1,5 +1,7 @@
 WheelLabDemoEnglishwordbook::Application.routes.draw do
-  resources :words
+  resources :words do
+    resources :comments, only: [ :create ]
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
