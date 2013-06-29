@@ -10,7 +10,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to word_path(@word)
     else
-      render 'word/show'
+      @comments = @word.comments
+      render 'words/show'
     end
   end
 end

@@ -17,6 +17,7 @@ class WordsController < ApplicationController
   def show
     @word = Word.find(params[:id])
     @comments = @word.comments
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
