@@ -84,4 +84,9 @@ class WordsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def test
+    @words = Word.for_test
+  end
+
 end
