@@ -1,0 +1,33 @@
+<div class="span12">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>User:</b>
+    <%= @word.user %>
+  </p>
+
+  <p>
+    <b>Raw:</b>
+    <%= @word.raw %>
+  </p>
+
+  <p>
+    <b>Translate:</b>
+    <%= @word.translate %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_word_path(@word) %> |
+  <%= link_to 'Back', words_path %>
+
+  <%= form_for([@word, @comment]) do |form| %>
+    <%= form.text_area :content, { class: 'span5', rows: 8 } %>
+    <%= form.submit %>
+  <% end %>
+
+  <% @comments.each do |comment| %>
+    <div class="comment-item" id="comment-<%= comment.id %>">
+      <p><%= comment.user[:email] %> 說：<br /><%= comment[:content] %></p>
+    </div>
+  <% end %>
+</div>

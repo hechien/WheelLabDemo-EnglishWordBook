@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>英文單字簿</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
+
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
